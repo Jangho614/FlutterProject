@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'post/post_screen.dart';
 import 'chat/chat_screen.dart';
+import 'post/post_screen.dart';
 import 'home/home_screen.dart';
 
 class MainScreen extends StatefulWidget {
@@ -16,7 +16,7 @@ class _MainScreenState extends State<MainScreen> {
 
   final List<Widget> _screens = [
     PostScreen(),
-    ChatScreen(),
+    ChatRoomScreen(), // ChatRoomScreen으로 변경
     HomeScreen()
   ];
 
