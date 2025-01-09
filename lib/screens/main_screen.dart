@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import 'post_screen.dart';
-import 'chat_screen.dart';
-import 'home_screen.dart';
+import 'post/post_screen.dart';
+import 'chat/chat_screen.dart';
+import 'home/home_screen.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -15,9 +15,9 @@ class _MainScreenState extends State<MainScreen> {
   int _selectedIndex = 0;
 
   final List<Widget> _screens = [
-    HomeScreen(),
     PostScreen(),
     ChatScreen(),
+    HomeScreen()
   ];
 
   void _onItemTapped(int index) {
@@ -32,14 +32,14 @@ class _MainScreenState extends State<MainScreen> {
       backgroundColor: Colors.white,
       body: _screens[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
-        selectedItemColor: Colors.orange,
+        selectedItemColor: Colors.lightBlueAccent,
         backgroundColor: Colors.white,
         type: BottomNavigationBarType.fixed,
         currentIndex: _selectedIndex,
         onTap: _onItemTapped,
         items: const [
           BottomNavigationBarItem(
-            icon: Icon(Icons.local_post_office_outlined),
+            icon: Icon(Icons.note_alt_outlined),
             label: '게시판',
           ),
           BottomNavigationBarItem(
